@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
 
-/// أنماط النصوص (Cairo للنصوص، Reem Kufi للعناوين والأرقام الكبيرة).
-///
-/// لازم تضيف الخطوط في pubspec.yaml (مكتوبة في آخر الملف).
 class AppTextStyle {
   AppTextStyle._();
 
   static const String cairo = 'Cairo';
   static const String reemKufi = 'ReemKufi';
 
-  // ── عناوين (Reem Kufi Bold) ───────────────────────────────
-  /// رقم النقاط الكبير في شاشة الولاء.
+  static const TextStyle splashTitle = TextStyle(
+    fontFamily: reemKufi,
+    fontWeight: FontWeight.w700,
+    fontSize: 34,
+    color: Colors.white,
+  );
+
   static const TextStyle display = TextStyle(
     fontFamily: reemKufi,
     fontWeight: FontWeight.w700,
@@ -20,7 +22,6 @@ class AppTextStyle {
     color: AppColors.ink,
   );
 
-  /// عنوان الشاشة الرئيسي (مثال: "أدخل كود التأكيد").
   static const TextStyle h1 = TextStyle(
     fontFamily: reemKufi,
     fontWeight: FontWeight.w700,
@@ -28,7 +29,6 @@ class AppTextStyle {
     color: AppColors.ink,
   );
 
-  /// عنوان كارت كبير (24 في الفيجما).
   static const TextStyle h2 = TextStyle(
     fontFamily: reemKufi,
     fontWeight: FontWeight.w700,
@@ -36,7 +36,6 @@ class AppTextStyle {
     color: AppColors.ink,
   );
 
-  /// رقم كبير (إحصائيات / ملخص) - 28 في الفيجما.
   static const TextStyle displaySmall = TextStyle(
     fontFamily: reemKufi,
     fontWeight: FontWeight.w700,
@@ -44,7 +43,6 @@ class AppTextStyle {
     color: AppColors.ink,
   );
 
-  /// عنوان الـ Top bar.
   static const TextStyle h3 = TextStyle(
     fontFamily: reemKufi,
     fontWeight: FontWeight.w700,
@@ -59,7 +57,6 @@ class AppTextStyle {
     color: AppColors.ink,
   );
 
-  /// عنوان قسم داخل الشاشة (مثال: "آخر التفعيلات").
   static const TextStyle sectionTitle = TextStyle(
     fontFamily: reemKufi,
     fontWeight: FontWeight.w700,
@@ -67,7 +64,6 @@ class AppTextStyle {
     color: AppColors.ink,
   );
 
-  /// الأوقات الكبيرة (13:05 / 07:05).
   static const TextStyle time = TextStyle(
     fontFamily: reemKufi,
     fontWeight: FontWeight.w700,
@@ -75,7 +71,6 @@ class AppTextStyle {
     color: AppColors.ink,
   );
 
-  // ── نصوص عادية (Cairo) ────────────────────────────────────
   static const TextStyle body = TextStyle(
     fontFamily: cairo,
     fontWeight: FontWeight.w400,
@@ -139,7 +134,6 @@ class AppTextStyle {
     color: AppColors.ink,
   );
 
-  /// أصغر نص في التصميم (10).
   static const TextStyle tiny = TextStyle(
     fontFamily: cairo,
     fontWeight: FontWeight.w400,
@@ -147,7 +141,6 @@ class AppTextStyle {
     color: AppColors.textMuted,
   );
 
-  /// عنوان الحقل فوق الـ TextField.
   static const TextStyle label = TextStyle(
     fontFamily: cairo,
     fontWeight: FontWeight.w600,
@@ -162,7 +155,6 @@ class AppTextStyle {
     color: AppColors.textHint,
   );
 
-  /// نص صغير جدًا (وقت، ملاحظة تحت عنصر).
   static const TextStyle micro = TextStyle(
     fontFamily: cairo,
     fontWeight: FontWeight.w400,
@@ -170,7 +162,6 @@ class AppTextStyle {
     color: AppColors.textMuted,
   );
 
-  /// نص الـ badge والحالة.
   static const TextStyle badge = TextStyle(
     fontFamily: cairo,
     fontWeight: FontWeight.w600,
@@ -184,7 +175,6 @@ class AppTextStyle {
     color: AppColors.primary,
   );
 
-  // ── الأزرار ───────────────────────────────────────────────
   static const TextStyle button = TextStyle(
     fontFamily: cairo,
     fontWeight: FontWeight.w700,
@@ -206,7 +196,6 @@ class AppTextStyle {
     color: AppColors.textOnDark,
   );
 
-  // ── التاب بار ─────────────────────────────────────────────
   static const TextStyle tab = TextStyle(
     fontFamily: cairo,
     fontWeight: FontWeight.w600,
@@ -214,7 +203,6 @@ class AppTextStyle {
     color: AppColors.textMuted,
   );
 
-  /// يرجّع TextTheme جاهز لـ ThemeData.
   static TextTheme textTheme({
     Color color = AppColors.ink,
     Color mutedColor = AppColors.textMuted,
@@ -235,4 +223,3 @@ class AppTextStyle {
     );
   }
 }
-
