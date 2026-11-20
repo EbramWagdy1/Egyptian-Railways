@@ -1,8 +1,14 @@
+import 'dart:async';
+
+import 'package:egyptianrailways/core/database/cache/cache_helper.dart';
+import 'package:egyptianrailways/core/routing/app_routes.dart';
+import 'package:egyptianrailways/core/services/service_locator.dart';
 import 'package:egyptianrailways/core/utils/app_assets.dart';
 import 'package:egyptianrailways/core/utils/app_strings.dart';
 import 'package:egyptianrailways/core/utils/app_text_style.dart';
 import 'package:egyptianrailways/features/splash/view/widget/splash_loader.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplachView extends StatefulWidget {
   const SplachView({super.key});
@@ -13,8 +19,23 @@ class SplachView extends StatefulWidget {
 
 class _SplachViewState extends State<SplachView> {
   @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 2), () {
+      if (mounted) {
+        bool isVisited = getIt<CacheHelper>().getData(key: 'isFirstTime') ?? false;
+        if (isVisited) {
+          context.go(AppRoutes.login);
+        } else {
+          context.go(AppRoutes.onBoarding);
+        }
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-  return Scaffold(
+    return Scaffold(
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -59,4 +80,3 @@ class _SplachViewState extends State<SplachView> {
     );
   }
 }
-

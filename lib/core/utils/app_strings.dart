@@ -14,7 +14,16 @@ class AppStrings {
 
   static const String onboardingTitle1 = 'احجز تذكرتك في دقايق';
   static const String onboardingBody1 =
-      'ابحث، اختار كرسيك، وفعّل تذكرتك من شباك المحطة.';
+      'ابحث اختار كرسيك وفعّل تذكرتك من شباك المحطة';
+
+  static const String onboardingTitle2 = 'تابع قطرك لحظة بلحظة';
+  static const String onboardingBody2 =
+      'اعرف مكانه والمحطة الجاية وموعد وصوله بالظبط';
+
+  static const String onboardingTitle3 = 'تنبيهات توفر وقتك';
+  static const String onboardingBody3 =
+      'هنبعتلك لو القطر اتأخر أو الرصيف اتغير أو فضي مكان';
+
   static const String start = 'ابدأ الآن';
 
   static const String login = 'تسجيل الدخول';

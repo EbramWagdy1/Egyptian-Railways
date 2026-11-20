@@ -1,20 +1,11 @@
+import 'package:egyptianrailways/app/app.dart';
+import 'package:egyptianrailways/core/database/cache/cache_helper.dart';
+import 'package:egyptianrailways/core/services/service_locator.dart';
 import 'package:flutter/material.dart';
 
-import 'features/splash/view/splach_view.dart';
-
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  setupServiceLocator();
+  await getIt<CacheHelper>().init();
   runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'سكة حديد مصر',
-      debugShowCheckedModeBanner: false,
-      home: SplachView(),
-    );
-  }
 }
