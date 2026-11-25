@@ -7,6 +7,7 @@ import 'package:egyptianrailways/features/home/view/widgets/frequent_routes_card
 import 'package:egyptianrailways/features/home/view/widgets/home_top_bar.dart';
 import 'package:egyptianrailways/features/home/view/widgets/next_trip_ticket_card.dart';
 import 'package:egyptianrailways/features/home/view/widgets/quick_actions_row.dart';
+import 'package:egyptianrailways/features/results/model/train_result_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -150,7 +151,18 @@ class _HomeViewState extends State<HomeView> {
                             }
                           });
                         },
-                        onBookTap: () {},
+                        onBookTap: () {
+                          context.push(
+                            AppRoutes.results,
+                            extra: ResultsArgs(
+                              fromStation: _fromStation,
+                              toStation: _toStation,
+                              departureDate: _departureDate ?? DateTime.now(),
+                              returnDate: _returnDate,
+                              isRoundTrip: _isRoundTrip,
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(height: 20),
                       QuickActionsRow(

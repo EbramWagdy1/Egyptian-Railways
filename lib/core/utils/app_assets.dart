@@ -19,5 +19,6 @@ class AppAssets {
   static const String iconNavHome = 'assets/svgs/icon_nav_home.svg';
   static const String iconBack = 'assets/svgs/icon_back.svg';
   static const String iconCheck = 'assets/svgs/icon_check.svg';
+  static const String iconSliders = 'assets/svgs/icon_sliders.svg';
 }
 
