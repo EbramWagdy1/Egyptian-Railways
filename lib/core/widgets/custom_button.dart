@@ -9,12 +9,16 @@ class CustomButton extends StatelessWidget {
     this.onPressed,
     this.width,
     this.height = 54,
+    this.borderRadius = 14,
+    this.fontSize = 15,
   });
 
   final String text;
   final VoidCallback? onPressed;
   final double? width;
   final double height;
+  final double borderRadius;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +29,18 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primary,
+          disabledBackgroundColor: AppColors.textDisabled,
+          disabledForegroundColor: Colors.white,
           elevation: 0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(borderRadius),
           ),
         ),
         child: Text(
           text,
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: AppTextStyle.cairo,
-            fontSize: 15,
+            fontSize: fontSize,
             fontWeight: FontWeight.w700,
             color: Colors.white,
           ),
