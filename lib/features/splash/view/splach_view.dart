@@ -25,7 +25,7 @@ class _SplachViewState extends State<SplachView> {
       if (mounted) {
         bool isVisited = getIt<CacheHelper>().getData(key: 'isFirstTime') ?? false;
         if (isVisited) {
-          context.go(AppRoutes.login);
+          context.go(AppRoutes.home);
         } else {
           context.go(AppRoutes.onBoarding);
         }

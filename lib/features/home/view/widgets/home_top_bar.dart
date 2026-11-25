@@ -1,0 +1,39 @@
+import 'package:egyptianrailways/core/utils/app_assets.dart';
+import 'package:egyptianrailways/core/utils/app_colors.dart';
+import 'package:egyptianrailways/core/utils/app_strings.dart';
+import 'package:egyptianrailways/core/utils/app_text_style.dart';
+import 'package:egyptianrailways/core/widgets/custom_circle_icon_button.dart';
+import 'package:flutter/material.dart';
+
+class HomeTopBar extends StatelessWidget {
+  const HomeTopBar({
+    super.key,
+    required this.userName,
+    this.onNotificationTap,
+  });
+
+  final String userName;
+  final VoidCallback? onNotificationTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            AppStrings.greeting(userName),
+            style: AppTextStyle.h3,
+          ),
+          CustomCircleIconButton(
+            assetPath: AppAssets.iconBell,
+            backgroundColor: AppColors.sky,
+            iconColor: AppColors.ink,
+            onTap: onNotificationTap,
+          ),
+        ],
+      ),
+    );
+  }
+}
