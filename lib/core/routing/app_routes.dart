@@ -8,4 +8,6 @@ class AppRoutes {
   static const String account = '/account';
   static const String selectStation = '/select-station';
   static const String selectDate = '/select-date';
+  static const String results = '/results';
+  static const String seatSelection = '/seat-selection';
 }
