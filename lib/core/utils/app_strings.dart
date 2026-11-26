@@ -178,6 +178,14 @@ class AppStrings {
   static const String noTripsFound = 'مفيش رحلات هنا دلوقتي';
 
   static const String liveTracking = 'تتبع القطر';
+  static String trackTrainNumber(String n) => 'تتبع قطر $n';
+  static const String nextStation = 'المحطة الجاية';
+  static const String tripProgress = 'تقدم الرحلة';
+  static const String remainingDistance = 'المسافة المتبقية';
+  static const String expectedArrival = 'الوصول المتوقع';
+  static const String currentSpeed = 'السرعة الحالية';
+  static const String shareMyTrip = 'شارك رحلتي';
+  static const String tripShareCopied = 'تم نسخ تفاصيل الرحلة للمشاركة';
   static const String notifications = 'الإشعارات';
   static const String ticketActivated = 'تم تفعيل تذكرتك';
   static const String oneHourLeft = 'فاضل ساعة على قطر 971';

@@ -7,6 +7,7 @@ import 'package:egyptianrailways/features/home/model/home_trip_model.dart';
 import 'package:egyptianrailways/features/home/view/home_view.dart';
 import 'package:egyptianrailways/features/home/view/select_date_view.dart';
 import 'package:egyptianrailways/features/home/view/select_station_view.dart';
+import 'package:egyptianrailways/features/live_tracking/view/live_tracking_view.dart';
 import 'package:egyptianrailways/features/my_trips/data/my_trips_dummy_data.dart';
 import 'package:egyptianrailways/features/my_trips/model/my_trip_model.dart';
 import 'package:egyptianrailways/features/my_trips/view/my_trips_view.dart';
@@ -95,9 +96,7 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: AppRoutes.track,
-                builder: (context, state) => const _TabPlaceholderView(
-                  title: AppStrings.tabTrack,
-                ),
+                builder: (context, state) => const LiveTrackingView(),
               ),
             ],
           ),
