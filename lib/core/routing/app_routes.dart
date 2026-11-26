@@ -10,4 +10,5 @@ class AppRoutes {
   static const String selectDate = '/select-date';
   static const String results = '/results';
   static const String seatSelection = '/seat-selection';
+  static const String rateTrip = '/rate-trip';
 }

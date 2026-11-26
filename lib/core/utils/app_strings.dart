@@ -170,6 +170,12 @@ class AppStrings {
   static String ratedOutOf(int n) => 'تم التقييم · $n من 5';
   static const String bookReturn = 'احجز العودة';
   static const String notBooked = 'لم تُحجز';
+  static const String suggestedReturnTrip = 'رحلة العودة المقترحة';
+  static const String tripAlerts = 'تنبيهات الرحلة';
+  static const String remindBeforeTripHour = 'تذكير قبل الرحلة بساعة';
+  static const String notifyWhenSeatAvailable = 'تنبيه لما يفضى مكان';
+  static const String searchTripsHint = 'ابحث برقم القطر أو المحطة...';
+  static const String noTripsFound = 'مفيش رحلات هنا دلوقتي';
 
   static const String liveTracking = 'تتبع القطر';
   static const String notifications = 'الإشعارات';
@@ -184,6 +190,19 @@ class AppStrings {
   static const String whatDidYouLike = 'إيه اللي عجبك؟';
   static const String yourNotes = 'ملاحظاتك (اختياري)';
   static const String notesHint = 'اكتب أي حاجة تحب نعرفها...';
+  static const String ratingVeryBad = 'سيئة جدًا';
+  static const String ratingAcceptable = 'مقبولة';
+  static const String ratingGood = 'كويسة';
+  static const String ratingVeryGood = 'كويسة جدًا';
+  static const String ratingExcellent = 'ممتازة';
+  static const List<String> rateTripTags = [
+    'راحة الكراسي',
+    'الالتزام بالمواعيد',
+    'نظافة العربة',
+    'سهولة الحجز',
+    'معاملة الموظفين',
+    'التكييف',
+  ];
 
   static const String account = 'حسابي';
   static const String loyaltyPoints = 'نقاط الولاء';

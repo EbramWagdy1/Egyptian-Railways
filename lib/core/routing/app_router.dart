@@ -7,6 +7,10 @@ import 'package:egyptianrailways/features/home/model/home_trip_model.dart';
 import 'package:egyptianrailways/features/home/view/home_view.dart';
 import 'package:egyptianrailways/features/home/view/select_date_view.dart';
 import 'package:egyptianrailways/features/home/view/select_station_view.dart';
+import 'package:egyptianrailways/features/my_trips/data/my_trips_dummy_data.dart';
+import 'package:egyptianrailways/features/my_trips/model/my_trip_model.dart';
+import 'package:egyptianrailways/features/my_trips/view/my_trips_view.dart';
+import 'package:egyptianrailways/features/my_trips/view/rate_trip_view.dart';
 import 'package:egyptianrailways/features/onboarding/view/on_boarding_view.dart';
 import 'package:egyptianrailways/features/results/model/train_result_model.dart';
 import 'package:egyptianrailways/features/results/view/results_view.dart';
@@ -56,6 +60,12 @@ class AppRouter {
           args: state.extra as SeatSelectionArgs,
         ),
       ),
+      GoRoute(
+        path: AppRoutes.rateTrip,
+        builder: (context, state) => RateTripView(
+          trip: state.extra as MyTripModel,
+        ),
+      ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
           return MainShellView(navigationShell: navigationShell);
@@ -75,8 +85,8 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: AppRoutes.trips,
-                builder: (context, state) => const _TabPlaceholderView(
-                  title: AppStrings.tabTrips,
+                builder: (context, state) => const MyTripsView(
+                  fineMessage: MyTripsDummyData.sampleFineMessage,
                 ),
               ),
             ],
